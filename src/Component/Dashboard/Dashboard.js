@@ -1,64 +1,83 @@
 import React from 'react';
 import Header from '../Header/Header';
-import { Line, LineChart, XAxis, YAxis } from 'recharts';
+import { Bar, BarChart, CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
 
 const Dashboard = () => {
 
     const data = [
         {
-            name: 'Page A',
-            uv: 4000,
-            pv: 2400,
-            amt: 2400,
+            "month": "Mar",
+            "investment": 100000,
+            "sell": 241,
+            "revenue": 10401
         },
         {
-            name: 'Page B',
-            uv: 3000,
-            pv: 1398,
-            amt: 2210,
+            "month": "Apr",
+            "investment": 200000,
+            "sell": 423,
+            "revenue": 24500
         },
         {
-            name: 'Page C',
-            uv: 2000,
-            pv: 9800,
-            amt: 2290,
+            "month": "May",
+            "investment": 500000,
+            "sell": 726,
+            "revenue": 67010
         },
         {
-            name: 'Page D',
-            uv: 2780,
-            pv: 3908,
-            amt: 2000,
+            "month": "Jun",
+            "investment": 500000,
+            "sell": 529,
+            "revenue": 40405
         },
         {
-            name: 'Page E',
-            uv: 1890,
-            pv: 4800,
-            amt: 2181,
+            "month": "Jul",
+            "investment": 600000,
+            "sell": 601,
+            "revenue": 50900
         },
         {
-            name: 'Page F',
-            uv: 2390,
-            pv: 3800,
-            amt: 2500,
-        },
-        {
-            name: 'Page G',
-            uv: 3490,
-            pv: 4300,
-            amt: 2100,
-        },
+            "month": "Aug",
+            "investment": 700000,
+            "sell": 670,
+            "revenue": 61000
+        }
     ];
 
     return (
-        <div>
+        <div >
             <Header></Header>
-            <p>this is Dashboard</p>
-            <LineChart width={800} height={500} data={data}>
-                <Line dataKey={'price'} fill="red"></Line>
-                <XAxis dataKey={'name'}></XAxis>
-                <YAxis dataKey={'price'}></YAxis>
+            <p className='text-center text-4xl font-mono font-semibold'>this is Dashboard</p>
 
-            </LineChart>
+            <div className='flex'>
+
+                <LineChart className='mt-7' width={530} height={350} data={data}
+                    margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="month" />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    <Line type="monotone" dataKey="sell" stroke="#8884d8" />
+                    <Line type="monotone" dataKey="investment" stroke="#82ca9d" />
+                    <Line type="monotone" dataKey="revenue" stroke="red" />
+                </LineChart>
+
+
+                <BarChart className='mt-7' width={730} height={350} data={data}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="month" />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    <Bar dataKey="sell" fill="black" />
+                    <Bar dataKey="investment" fill="#82ca9d" />
+                    <Bar dataKey="revenue" fill="red" />
+                </BarChart>
+
+            </div>
+
+
+
         </div>
     );
 };
