@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import Review from './Component/Review/Review';
 import Dashboard from './Component/Dashboard/Dashboard';
 import Blogs from './Component/Blogs/Blogs';
+import Notfound from './Component/Notfound/Notfound';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/review' element={<Review></Review>} ></Route>
         <Route path='/dashboard' element={<Dashboard></Dashboard>} ></Route>
         <Route path='/blogs' element={<Blogs></Blogs>} ></Route>
+        <Route path='*' element={<Notfound></Notfound>} ></Route>
       </Routes>
 
     </div>
