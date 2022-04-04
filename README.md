@@ -1,3 +1,16 @@
+# MOBILE BAZAR
+Mobile bazar
+
+live link : 
+
+summary of project:
+1. Active link for every pages
+2. in dash board ,there is bar chart and line chart
+3. In our home page, when we click show more it shows all customers review
+4. we can see all customers review in review route
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
