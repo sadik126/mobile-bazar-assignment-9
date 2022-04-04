@@ -1,7 +1,7 @@
 # MOBILE BAZAR
 Mobile bazar
 
-live link : 
+live link : https://mobile-bazar13.netlify.app/
 
 summary of project:
 1. Active link for every pages
